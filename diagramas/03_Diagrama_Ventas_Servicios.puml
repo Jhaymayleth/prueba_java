@@ -1,0 +1,59 @@
+@startuml 03_Diagrama_Ventas_Servicios.puml
+
+title Orden de Venta Lavadero
+
+
+class OrdenVenta {
+
+-codigo : String
+-fecha : Date
+-total : double
+
+}
+
+
+class DetalleVenta {
+
+-cantidad : int
+-precio : double
+-descuento : double
+
+}
+
+
+class ServicioAplicado {
+
+-fechaInicio : Date
+-fechaFin : Date
+-descripcion : String
+
+}
+
+
+class Cubiculo {
+
+-codigo : String
+-nombre : String
+-area : double
+-estado : String
+
+}
+
+
+Cliente "1" -- "*" OrdenVenta
+
+OrdenVenta "1" -- "*" DetalleVenta
+
+DetalleVenta "*" -- "1" Producto
+
+DetalleVenta "*" -- "1" Servicio
+
+
+Vehiculo "1" -- "*" ServicioAplicado
+
+Empleado "1" -- "*" ServicioAplicado
+
+Cubiculo "1" -- "*" ServicioAplicado
+
+
+@enduml

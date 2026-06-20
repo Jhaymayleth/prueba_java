@@ -1,0 +1,49 @@
+@startuml 02_Diagramas_Compras.puml
+
+title Gestion de Compras
+
+
+class Proveedor {
+-idProveedor : int
+-nombre : String
+-telefono : String
+}
+
+
+class Cotizacion {
+-codigo : String
+-fechaEmision : Date
+-fechaExpiracion : Date
+-estado : String
+}
+
+
+class DetalleCotizacion {
+
+-consecutivo : int
+-codigoProducto : String
+-cantidad : int
+-precioUnitario : double
+-iva : double
+-descuento : double
+
+}
+
+
+class Pedido {
+-codigo : String
+-fecha : Date
+-estado : String
+}
+
+
+Proveedor "1" -- "*" Cotizacion
+
+Cotizacion "1" -- "*" DetalleCotizacion
+
+DetalleCotizacion "*" -- "1" Producto
+
+Pedido "1" -- "*" Producto
+
+
+@enduml

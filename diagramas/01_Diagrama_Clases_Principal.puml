@@ -1,0 +1,88 @@
+@startuml 01_Diagrama_Clases_Principal.puml
+
+title Sistema Lavadero - Diagrama de Clases Principal
+
+
+class Cliente {
+- idCliente : int
+- nombres : String
+- apellidos : String
+- telefono : String
+- correo : String
++ registrar()
++ actualizarDatos()
+}
+
+
+class Vehiculo {
+- placa : String
+- marca : String
+- tipo : String
+- color : String
+}
+
+
+class Empleado {
+- idEmpleado : int
+- nombres : String
+- apellidos : String
+- cargo : String
+- horario : String
++ atenderCliente()
++ aplicarServicio()
+}
+
+
+class Cargo {
+- idCargo : int
+- nombre : String
+- descripcion : String
+}
+
+
+class Contrato {
+- fechaInicio : Date
+- sueldoBase : double
+- fechaFin : Date
+}
+
+
+class Categoria {
+- codigo : String
+- nombre : String
+- icono : String
+}
+
+
+class Producto {
+- codigo : String
+- nombre : String
+- marca : String
+- precioCompra : double
+- precioVenta : double
+- stock : int
+- estado : String
+}
+
+
+class Servicio {
+- codigo : String
+- nombre : String
+- descripcion : String
+- precio : double
+- estado : String
+}
+
+
+Cliente "1" -- "0..*" Vehiculo
+
+Empleado "1" -- "1" Contrato
+
+Empleado "*" -- "*" Cargo
+
+Categoria "1" -- "0..*" Producto
+
+Categoria "1" -- "0..*" Servicio
+
+
+@enduml
