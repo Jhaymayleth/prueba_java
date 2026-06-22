@@ -1,18 +1,232 @@
-## Getting Started
+# Sistema de Gestión - Lavadero ABC
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Descripción del proyecto
 
-## Folder Structure
+Aplicación desarrollada en Java para gestionar los procesos principales de un lavadero de vehículos.
 
-The workspace contains two folders by default, where:
+El sistema permite administrar información de clientes, vehículos, empleados, productos, servicios, categorías, cubículos y órdenes de venta.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+El proyecto está desarrollado como un prototipo funcional aplicando programación orientada a objetos (POO) y una estructura organizada por capas.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+---
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Objetivo
 
-## Dependency Management
+Diseñar un sistema que permita representar las principales entidades del negocio de un lavadero de carros, facilitando el registro y consulta de información relacionada con la atención de clientes, venta de productos y aplicación de servicios.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+---
+
+## Tecnologías utilizadas
+
+- Java
+- Programación Orientada a Objetos (POO)
+- Java Swing (Interfaz gráfica)
+- Visual Studio Code
+- Git / GitHub
+
+---
+
+## Estructura del proyecto
+
+```
+
+LavaderoABC
+│
+├── src
+│   │
+│   └── lavadero
+│       │
+│       ├── modelo
+│       │   ├── Cliente.java
+│       │   ├── Vehiculo.java
+│       │   ├── Empleado.java
+│       │   ├── Cargo.java
+│       │   ├── Contrato.java
+│       │   ├── Producto.java
+│       │   ├── Servicio.java
+│       │   ├── Categoria.java
+│       │   ├── Cubiculo.java
+│       │   ├── OrdenVenta.java
+│       │   ├── DetalleVenta.java
+│       │   └── ServicioAplicado.java
+│       │
+│       ├── vista
+│       │   ├── VentanaPrincipal.java
+│       │   ├── Formularios.java
+│       │   ├── Botones.java
+│       │   └── Tablas.java
+│       │
+│       └── Main.java
+│
+└── README.md
+
+```
+
+---
+
+## Módulos principales
+
+### Clientes
+
+Permite registrar y consultar la información de los clientes:
+
+- Identificación
+- Nombre
+- Apellidos
+- Teléfono
+- Correo
+
+Un cliente puede tener asociados varios vehículos.
+
+---
+
+### Vehículos
+
+Gestiona los automóviles atendidos:
+
+- Placa
+- Marca
+- Tipo
+- Color
+
+Relación:
+
+Cliente 1 ---- N Vehículos
+
+---
+
+### Empleados
+
+Administra los trabajadores del lavadero:
+
+- Datos personales
+- Cargo
+- Contrato
+- Funciones asignadas
+
+---
+
+### Productos y Servicios
+
+Permite manejar el catálogo disponible:
+
+Productos:
+
+- Código
+- Nombre
+- Marca
+- Precio
+- Stock
+
+Servicios:
+
+- Código
+- Nombre
+- Precio
+- Descripción
+
+
+Ambos pertenecen a una categoría.
+
+---
+
+### Órdenes de venta
+
+Representa las solicitudes realizadas por los clientes.
+
+Incluye:
+
+- Cliente
+- Empleado encargado
+- Productos
+- Servicios
+- Detalles de venta
+- Total de la compra
+
+---
+
+### Cubículos
+
+Controla las áreas disponibles para aplicar servicios:
+
+Estados:
+
+- Disponible
+- Ocupado
+
+---
+
+## Arquitectura del proyecto
+
+El sistema está organizado utilizando una separación básica:
+
+### Modelo
+
+Contiene las clases principales del negocio.
+
+Ejemplo:
+
+
+
+Cliente
+Producto
+Vehiculo
+Servicio
+Empleado
+
+
+
+---
+
+### Vista
+
+Contiene los elementos de interfaz gráfica:
+
+- Ventanas
+- Formularios
+- Botones
+- Tablas
+
+---
+
+## Ejecución del proyecto
+
+1. Abrir el proyecto en Visual Studio Code.
+
+2. Verificar que Java esté instalado.
+
+3. Ejecutar:
+
+
+
+src/lavadero/Main.java
+
+
+
+4. La aplicación iniciará el sistema del Lavadero ABC.
+
+---
+
+## Funcionalidades implementadas
+
+Actualmente el sistema permite:
+
+✔ Crear entidades del negocio  
+✔ Manejar relaciones entre clases  
+✔ Registrar clientes  
+✔ Registrar productos  
+✔ Gestionar vehículos  
+✔ Controlar cubículos  
+✔ Crear órdenes de venta  
+✔ Interfaz gráfica inicial  
+
+---
+
+## Autor
+
+Jose Mauricio Rangel Nuñez
+
+Proyecto académico - Ingeniería de Software
+
+Sistema de gestión para Lavadero ABC
+
