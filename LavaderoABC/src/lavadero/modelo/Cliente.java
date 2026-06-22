@@ -65,5 +65,16 @@ public class Cliente {
         return correo;
 
     }
+    public String getNombres(){
 
+    return nombres;
+
+    }
+
+
+    public String getApellidos(){
+
+    return apellidos;
+
+    }
 }

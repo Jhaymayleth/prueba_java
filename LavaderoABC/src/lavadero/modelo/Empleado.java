@@ -38,4 +38,10 @@ public class Empleado {
     public String getNombreCompleto() {
         return nombres + " " + apellidos;
     }
+
+    public int getIdEmpleado(){
+
+    return idEmpleado;
+
+    }
 }

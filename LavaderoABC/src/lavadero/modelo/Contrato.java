@@ -17,4 +17,8 @@ public class Contrato {
     public double getSueldoBase() {
         return sueldoBase;
     }
+
+    public Date getFechaInicio() {
+        return fechaInicio;
+    }
 }

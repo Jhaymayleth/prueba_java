@@ -1,10 +1,23 @@
 package lavadero;
 
+
+import lavadero.vista.VentanaPrincipal;
+
+
 public class Main {
+
 
     public static void main(String[] args) {
 
-        System.out.println("Sistema Lavadero ABC");
+
+        VentanaPrincipal ventana =
+                new VentanaPrincipal();
+
+
+        ventana.setVisible(true);
+
 
     }
+
+
 }
